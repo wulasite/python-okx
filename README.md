@@ -76,3 +76,13 @@ Note
     https://github.com/Rapptz/discord.py/issues/1996
     https://github.com/aaugustin/websockets/issues/587
     ```
++ 改动
+  支持传proxies参数
+```python
+proxies = {
+    "http://": "socks5://127.0.0.1:10800",
+    "https://": "socks5://127.0.0.1:10800"
+}
+OKX_CLIENT.Client(api_key=api_key, api_secret_key=secret_key, passphrase=passphrase,
+                                            use_server_time=False, flag=flag, base_api="https://aws.okx.com", debug=False, proxies=proxies)
+```
